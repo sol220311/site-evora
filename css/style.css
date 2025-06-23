@@ -1,0 +1,106 @@
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background-color:#e6c4b3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+
+form {
+	background-color: #ffffff;
+	margin: 50px auto;
+	padding: 20px;
+	border: solid 2px #65392f;
+	border-radius: 15px;
+	width: 400px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+div {
+	clear: both;
+	padding-top: 10px;
+}
+
+div.two label {
+	font-weight:bold;
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding-right: 10px;
+	position: relative;
+}
+
+div.two input, div.two select{
+	float: left;
+	width: 150px;
+	text-align: left;
+}
+
+div.two select {
+	width: 157px;
+	
+}
+
+div.one {
+	text-align: center;
+}
+
+#submit{
+	clear: both;
+	width: 125px;
+	height: 30px;
+	background-color: white;
+	text-align:center;
+	line-height:20px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.tooltip {
+	display: block; 
+	position: absolute; 
+	visibility: hidden;
+	left: 25em;
+	top: 0; 
+	width: 10em;
+	padding: 0.5em;
+	font-weight: normal;
+	color: #FFF;
+	background-color:#65392f;
+	border:solid 2px #e6c4b3;
+	border-radius: 2%;
+}
+
+.error {
+	color: #D92525;
+}
+span.error{
+	padding-left: 10px;
+}
+/* Quando tem erro, o label fica vermelho */
+label.error {
+    color: #D92525; /* vermelho */
+}
+
+/* Quando está correto, o label fica verde */
+label.valid {
+    color: #3A7D44; /* verde escuro */
+}
+/* Para mostrar o ✔ verde como uma mensagem ao lado direito */
+span.valid {
+    color: #3A7D44;           /* verde escuro */
+    font-weight: bold;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+/* Oculta a mensagem de erro quando válido */
+span.error {
+    color: #D92525;           /* vermelho */
+    padding-left: 10px;
+    display: inline-block;
+}

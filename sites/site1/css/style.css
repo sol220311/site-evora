@@ -1,0 +1,455 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#F2F2F2;
+}
+
+#wrapper {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    /* primary grid */
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "menu"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 50px minmax(650px, auto) minmax(100px, auto);
+    background-color: #b92328;
+    padding: 0.50rem;
+}
+header{
+    /* name for primary grid*/
+    /* attach to header tag*/
+    grid-area: banner;
+    grid-template-rows: 1fr;
+    margin-top: 10px;
+    background-color: #259345;
+
+   
+    /*sub grid */
+    display: grid;
+    grid-template-areas:
+    "logo company company company";
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+    margin-bottom: 0.30em;
+    margin-top: 0.30em;
+    background-color:white;
+}
+    header.logo{
+        /* name for sub grid section*/
+        width: auto; 
+        height: auto; 
+        grid-area:logo;
+        float: right; 
+       
+       
+}
+    header h1 {
+        /* name for sub grid scetion*/
+        grid-area: company;
+        color:white ;
+        font-size: 3em;
+        text-align: right;
+        padding: 2% 2% 0 0;
+
+}
+    nav {
+        grid-area: menu;
+        height: 50px;
+        margin: 0.87em 0;
+        width: 100%;
+        background-color: white;
+}
+   
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+      
+}
+    nav a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+       
+    }
+    nav a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;   
+    }
+    nav a:hover{
+        color:white;
+        background-color:#189c3d;
+}
+
+#homemain{
+        grid-area: content;
+        display: grid;
+        min-height: 650px;
+        width: 100%;
+        text-align: center;
+        grid-template-areas: 
+        "home-article1"   
+        "home-article2";
+        grid-template-rows: 1fr;
+        grid-template-columns:1fr;
+        background-color: white;
+        padding: 0.67em;
+        gap:1%;
+        margin-top: 1.50em;
+
+    }
+#home-article1{
+        grid-area: home-article1;
+        background-color: #259345;
+        width: 100%;
+        padding: 1rem;
+    }
+#home-article1 h2 {
+    color: white;
+    font-size: 30px;
+    font-family:sans-serif;
+    
+    }
+    
+#home-article2{
+        grid-area: home-article2;
+        background-color:white;
+        width: 100%;
+        padding: 1rem;
+}
+#home-article2 img {
+        width:90%;
+        height: auto;
+}
+#roommain {
+        grid-area: content;
+        display: grid;
+        min-height: 650px;
+        width: 100%;
+        text-align: center;
+        grid-template-areas:
+          "room-article1 room-article2"
+          "room-article3 room-article3";
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;
+        padding: 0.67em;
+        gap: 1%;
+        margin-top: 1.50em;
+}
+
+#room-article1{
+        grid-area: room-article1;
+        background-color:white;
+        width: 100%;
+        padding: 1rem;
+}
+#room-article1 img {
+    width: 90%;
+    height: auto;
+}
+#room-article1 h2{
+        text-align: center;
+        font-size: 30px;
+}
+#room-article2{
+        grid-area: room-article2;
+        background-color:white;
+        width: 100%;
+        padding: 1rem;
+}
+#room-article2 img {
+        width: 90%;
+        height: auto;
+}
+#room-article2 h2{
+        text-align: center;
+        font-size: 30px;
+}
+#room-article3{
+        grid-area: room-article3;
+        background-color:white;
+        width: 100%;
+        padding: 1rem;
+}
+#room-article3 img {
+        width:90%;
+        height: auto;
+}
+#room-article3 h2{
+        text-align: center;
+        font-size: 30px;
+}
+.heart-icon {
+        color: green;       /* cor verde */
+        font-size: 24px;    /* tamanho do ícone */
+        cursor: pointer;    /* muda o cursor para mãozinha, opcional */
+        transition: color 0.3s ease;
+      }
+      
+      .heart-icon:hover {
+        color: darkgreen;   /* cor um pouco mais escura ao passar o mouse */
+      }      
+#productmain {
+        grid-area: content;
+        display: grid;
+        min-height: 650px;
+        width:100%;
+        text-align: center;
+        grid-template-areas: 
+        "product-article1  product-article2"
+        "product-article3 product-article4"
+        "product-article5 product-article6";
+        grid-template-rows: 1fr;
+        grid-template-columns: repea(3, 1fr);
+        background-color: white;
+        padding: 0.67em;
+        gap: 1%;
+        margin-top: 1.50em;
+}
+#product-article1{
+        grid-area: product-article1;
+        width: 100%;
+        padding: 1rem;
+}
+#product-article1 img {
+        width:90%;
+        height: auto;
+}
+#product-article2{
+        grid-area: product-article2;
+        width: 100%;
+        padding: 1rem;
+}
+#product-article2 img {
+        width:90%;
+        height: auto;
+}
+#product-article3{
+        grid-area: product-article3;
+        width: 100%;
+        padding: 1rem;
+}
+#product-article3 img {
+        width:90%;
+        height: auto;
+}
+#product-article4{
+        grid-area: product-article4;
+        width: 100%;
+        padding: 1rem;
+}
+#product-article4 img {
+        width:90%;        
+        height: auto;
+}
+#cartmain {
+        grid-area: content;
+        display: grid;
+        min-height: 650px;
+        width:100%;
+        text-align: center;
+        grid-template-areas: 
+        "cart-article1 cart-article2"
+        "cart-article3 cart-article3";
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: white;
+        padding: 0.67em;
+        gap:1%;
+        margin-top: 1.50em;
+}
+#cart-article1{
+    grid-area: cart-article1;
+    background-color:white;
+    width: 100%;
+    padding: 1rem;
+}
+#cart-article1 img{
+    width: 90%;
+    height: auto;
+}
+#cart-article2{
+    grid-area: cart-article2;
+    background-color:white;
+    width: 100%;
+    padding: 1rem;
+}
+.btn-cart {
+        display: inline-block;
+        background-color: #259345;
+        color: white;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .btn-cart:hover {
+        background-color: #1b6c33;
+      }
+      
+#cart-article3 {
+    grid-area: cart-article3;
+    background-color:white;
+    width: 100%;
+    padding: 1rem;
+}
+.btn-cart {
+        font-size: 1em;
+        padding: 0.8em;
+        background-color: #259345;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 100%; /* 👈 deixa o botão bem largo */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-cart:hover {
+        background-color: #1a6d2c;
+    }
+    
+
+footer{
+        grid-area:footer;
+        display: grid;
+        grid-template-areas: "policy policy right right";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        background-color: white;
+        padding: 0.67em;
+        gap:1%;
+        margin-top: 0.75em;
+        margin-bottom: 0.30em;
+}
+#policy{
+        grid-area: policy;
+        width: 100%;
+        background-color:white;
+        gap: 4%;
+        padding: 1rem;
+}
+#right{
+        grid-area: right;
+        background-color:white;
+        gap: 10%;
+        padding: 1rem;
+}
+#right a {
+        display: block; /* Faz os links ficarem um abaixo do outro */
+        margin-bottom: 5px; /* Dá espaço entre os links */
+}
+@media screen and (max-width: 600px) {
+        /* Wrapper: muda a altura das linhas do grid principal */
+        #wrapper {
+          grid-template-rows: 70px 50px minmax(650px, auto) minmax(100px, auto);
+        }
+      
+        /* Header: deixa logo e título lado a lado e mais compactos */
+        header {
+          grid-template-areas: "logo company";
+          grid-template-columns: auto 1fr;
+          grid-template-rows: 70px;
+          height: 70px;
+          align-items: center;
+          padding: 0 1rem;
+        }
+        header img {
+          grid-area: logo;
+          max-width: 50px;
+          height: auto;
+        }
+        header h1 {
+          grid-area: company;
+          font-size: 1.5em;
+          text-align: left;
+          line-height: normal;
+          padding: 0;
+          color: #259345;
+        }
+      
+        /* Nav: mantém a barra de navegação visível, com links menores */
+        nav {
+          height: 50px;
+        }
+        nav ul {
+          flex-direction: column; /* empilha os links verticalmente */
+          justify-content: flex-start;
+        }
+        nav a {
+          font-size: 0.75em;
+          padding: 0.5em 1em;
+        }
+      
+        /* Home main: muda para uma coluna só */
+        #homemain {
+          grid-template-areas:
+            "home-article1"
+            "home-article2";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          padding: 0.5em;
+        }
+      
+        /* Room main: muda para coluna única */
+        #roommain {
+          grid-template-areas:
+            "room-article1"
+            "room-article2"
+            "room-article3";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+          padding: 0.5em;
+        }
+      
+        /* Product main: muda para coluna única (sem repeat) */
+        #productmain {
+          grid-template-areas:
+            "product-article1"
+            "product-article2"
+            "product-article3"
+            "product-article4"
+            "product-article5"
+            "product-article6";
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, auto);
+          padding: 0.5em;
+        }
+      
+        /* Cart main: coluna única para melhor visualização */
+        #cartmain {
+          grid-template-areas:
+            "cart-article1"
+            "cart-article2"
+            "cart-article3";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+          padding: 0.5em;
+        }
+      
+        /* Footer: muda para duas colunas simples */
+        footer {
+          grid-template-areas:
+            "policy"
+            "right";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          padding: 0.5em;
+        }
+      }
+      
